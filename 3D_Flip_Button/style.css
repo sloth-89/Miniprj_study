@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* 원근감 설정. 기본적으로 최상위 클래스에 지정 */
+    /* 값이 작으면 카메라 가까워지는 느낌 값이 크면 카메라가 멀어지는 느낌 */
+    perspective: 1000px;
+}
+
+.flip-btn{
+    width: 200px;
+    height: 100px;
+    color: white;
+    text-align: center;
+    /* 요소의 height값과 line-height값을 같게 하면 수직 중앙 정렬 된다.(텍스트가 한 줄 일때만 가능) */
+    line-height: 100px;
+    /* 요소의 3D 공간 배치 */
+    transform-style: preserve-3d;
+    /* 회전 시간 지정 */
+    transition: .5s;
+    cursor: pointer;
+}
+
+.flip-btn:hover{
+    transform: rotateX(-90deg);
+}
+
+.front{
+    background-color: goldenrod;
+    height: 100px;
+    transform: translateZ(50px);
+}
+
+.back{
+    background-color: darkgoldenrod;
+    height: 100px;
+    /* z축이 위 아래, y축이 앞 뒤, x축이 좌 우 */
+    transform: rotateX(90deg) translateZ(150px) ;
+}
