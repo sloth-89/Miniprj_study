@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+body{
+    background: url(https://i.imgur.com/XWXZpgV.jpeg) no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    font-family: 'Questrial', sans-serif;
+}
+
+#contents{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+#contents h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    margin-bottom: 16px;
+}
+
+#contents p{
+    font-size: 23px;
+    margin-bottom: 16px;
+}
+
+#contents a{
+    display: inline-block;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 17px;
+    font-weight: bold;
+    transition: all .5s;
+}
+
+#contents a:hover{
+    background-color: gray;
+}
+
+@media(max-width:769px){
+    #contents h1{
+        font-size: 40px;
+    }
+    
+    #contents p{
+        font-size: 15px;
+    }
+    #contents a{
+        font-size: 10px;
+    }
+}
