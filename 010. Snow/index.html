@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snow</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="snow"></div>
+    <script>
+        // 눈 하나에 대한 함수 생성
+        function createSnow(){
+            const el = document.createElement("div");
+            el.classList.add('snow');
+            el.style.marginLeft = randomPosition() + 'px';
+            document.body.appendChild(el);
+        }
+
+        // 포지션을 랜덤으로 하는 함수 생성
+        function randomPosition(){
+            return Math.floor(Math.random() * window.innerWidth);
+            // window.innerWidth를 넣어서 width 값 안에서 랜덤하게 생성되게
+        }
+
+        for(let i=0; i<300; i++){
+            createSnow();
+        }
+
+        createSnow();
+        createSnow();
+        createSnow();
+    </script>
+    
+</body>
+</html>
